@@ -14,7 +14,7 @@ services:
 ## App and Worker
   app:
     # Comment to use dockerhub image
-    image: arnaus/pixelfed:ladragonera_0.11.12
+    image: pixelfed/pixelfed:latest
     restart: unless-stopped
     env_file:
       - .env.docker
@@ -32,7 +32,7 @@ services:
       - redis
 
   worker:
-    image: arnaus/pixelfed:ladragonera_0.11.12
+    image: pixelfed/pixelfed:latest
     restart: unless-stopped
     env_file:
       - .env.docker
